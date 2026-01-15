@@ -5,6 +5,7 @@ import AppLayout from "./components/AppLayout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Products from "./pages/Products/Products";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import CategoriesPage from "./pages/categories";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="category" element={<CategoriesPage />} />
             <Route path="products" element={<Products />} />
           </Route>
         </Routes>
