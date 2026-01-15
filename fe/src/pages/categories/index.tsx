@@ -4,6 +4,7 @@ import AppFilters, {
   type FilterConfig,
 } from "../../components/common/AppFilters";
 import { Button } from "antd";
+import TableCategories from "./Table";
 
 type Props = {};
 
@@ -54,13 +55,23 @@ const CategoriesPage = (props: Props) => {
           : "0 2px 8px rgba(0,0,0,0.1)",
       }}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-8">
         <AppFilters
           filters={categoriesFilter}
           onchange={handleGetValueFilter}
         />
         <Button type="primary">+ Tạo danh mục mới</Button>
       </div>
+      <TableCategories
+        loading={false}
+        page={1}
+        pageSize={10}
+        total={0}
+        categories={[]}
+        onPageChange={() => {}}
+        onDelete={() => {}}
+        onEdit={() => {}}
+      />
     </div>
   );
 };

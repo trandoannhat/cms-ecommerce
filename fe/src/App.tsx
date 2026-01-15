@@ -5,7 +5,7 @@ import AppLayout from "./components/AppLayout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Products from "./pages/Products/Products";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import CategoriesPage from "./pages/categories";
+import CategoriesPage from "./pages/Categories";
 
 function App() {
   return (
